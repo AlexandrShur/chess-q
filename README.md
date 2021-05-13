@@ -8,9 +8,9 @@ For 1000 board please use -Xms1024m -Xmx2048m.
 **Note:** Default board dimension is 1000.
 If you want to specify any other dimension just pass integer argument to the application.
 
-## Arguments list which accept application (arguments order insensitive):
+## Arguments list which application accept (arguments order insensitive):
 * Any integer value: will be used as board dimension.
-* draw: Draws board in console. Please don't use for large boards))
+* draw: Draws board in a console. Please don't use for large boards))
 * without: Doesn't apply start queens positions. In other words search will be performed on empty board.
 You can use it to compare execution time.
 
