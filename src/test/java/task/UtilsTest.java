@@ -9,7 +9,7 @@ import java.util.List;
 public class UtilsTest {
 
     @Test
-    public void sortFreeBoardRows_hasColumnsWithDifferentSize_rowsSortedInTheAscendingOrder() {
+    public void sortRows_hasColumnsWithDifferentSize_rowsSortedInTheAscendingOrder() {
 
         // Arrange.
         List<List<Cell>> rows = new ArrayList<>();
@@ -33,7 +33,7 @@ public class UtilsTest {
     }
 
     @Test
-    public void sortFreeBoardRows_noRows_contentRemainsUnchanged() {
+    public void sortRows_noRows_contentRemainsUnchanged() {
 
         // Arrange.
         List<List<Cell>> rows = new ArrayList<>();
@@ -330,7 +330,7 @@ public class UtilsTest {
     public void findQueensPositions_board8x8WithPredefinedCell_8QueensFoundIncludingSpecified() {
 
         // Arrange.
-        BoardManager boardManager = getBoardManager8x8();
+        BoardManager boardManager = new BoardManager(8);
         boardManager.fillCell(new Cell(0, 0));
 
         // Act.
@@ -379,10 +379,6 @@ public class UtilsTest {
 
     private boolean[][] getBoard8x8() {
         return getBoard(8);
-    }
-
-    private BoardManager getBoardManager8x8() {
-        return new BoardManager(8);
     }
 
     private boolean[][] getBoard(int dimension) {
